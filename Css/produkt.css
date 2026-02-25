@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.product-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* Billede */
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.product-image img {
+  width: 100%;
+}
+
+/* Info */
+.product-info {
+  padding: 3rem;
+}
+
+/* Købsboks */
+.product-buy {
+  background: #e11010;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-buy select,
+.product-buy button {
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
+.product-buy button {
+  background: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.373);
+}
+.product-buy button:hover {
+  background: #f0f0f0;
+}
+@media (max-width: 768px) {
+  .product-page {
+    grid-template-columns: 1fr;
+  }
+  .product-image,
+  .product-info,
+  .product-buy {
+    padding: 2rem;
+  }
+}

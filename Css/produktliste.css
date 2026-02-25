@@ -1,0 +1,85 @@
+/* produktliste */
+.produklist {
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-row: auto;
+    gap: 5rem;
+    margin: 2em;
+  }
+  main h2 {
+    grid-column: 1 / -1;
+  }
+  article {
+    margin: 0;
+    font-size: 0.9em;
+  }
+  .sold-out-and-img-container {
+    display: grid;
+    > * {
+      place-self: start start;
+      grid-area: 1/1;
+    }
+  }
+
+  .soldOut img {
+    opacity: 0.2;
+  }
+  .soldOuttext {
+    display: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 1rem;
+    border: 4px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+  }
+  .soldOut .soldOuttext {
+    display: block;
+  }
+  article {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-row: span 6;
+    gap: 0;
+  }
+
+  .discount-element p {
+    display: none;
+  }
+  .discounted {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 0.5rem;
+    place-content: end start;
+  }
+
+  .discounted .discount-element {
+    display: flex;
+    justify-content: space-between;
+    & p {
+      display: block;
+    }
+  }
+  img {
+    width: 100%;
+  }
+
+  .color-me-white {
+    color: white;
+  }
+  .color-me-red {
+    color: white;
+    border: 5px solid red;
+    background-color: red;
+    margin-top: 3.1rem;
+  }
+}
+
+/* font */
+body {
+  font-family: "Arial", sans-serif;
+}
+
+article a {
+  color: black;
+}
