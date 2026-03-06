@@ -1,7 +1,11 @@
 const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
+const id = params.get("id") ?? "1526";
 const produktImage = document.querySelector(".product-page");
 
+document.querySelector(".back-btn").addEventListener("click", goBack);
+function goBack() {
+  window.history.back();
+}
 console.log("ID fra URL:", id);
 fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
   .then((res) => res.json())
